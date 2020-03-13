@@ -1,0 +1,146 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return  MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.cyan[100],
+        appBar: AppBar(
+          leading: Icon(Icons.dashboard),
+          title: Text("Profil"),
+          centerTitle: true,
+          actions: <Widget>[Icon(Icons.arrow_back)],
+          bottom: PreferredSize(
+            child: Container(
+              color:Colors.green,
+              height: 4.0,
+            ),
+            preferredSize: null
+          ),
+          backgroundColor: Colors.blueAccent,
+        ),
+        body: Konten()
+      )
+    );
+  }
+}
+
+class Konten extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+    child:Column(
+      children: <Widget>[
+        Container(
+          width: 150,
+            height: 150,
+            margin: EdgeInsets.only(top:10),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(fit: BoxFit.fill, image: AssetImage('assets/ar.jpg'),),
+            ),
+          ),
+          Text('Made Arya Widiarta', style: TextStyle(color: Colors.black, fontSize: 24.0),),
+          Text('arya.widiarta@undiksha.ac.id', style: TextStyle(color: Colors.blue, fontSize: 12.0),),
+          Row(
+            children: <Widget>[
+              Container(
+                child: Icon(Icons.my_location, size: 60, color: Colors.green,),
+                margin: EdgeInsets.only(top:15, left:50),
+                padding: EdgeInsets.only(left:10, right:10, top:5, bottom:5),
+                decoration: BoxDecoration(
+                  color: Colors.cyan[100],
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: Colors.purple,
+                    width: 2,
+                  )
+                ),
+              ),
+              Container(
+                child: Icon(Icons.home, size: 60, color: Colors.blue,),
+                margin: EdgeInsets.only(top:15, left:55),
+                padding: EdgeInsets.only(left:10, right:10, top:5, bottom:5),
+                decoration: BoxDecoration(
+                  color: Colors.cyan[100],
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: Colors.purple,
+                    width: 2,
+                  )
+                ),
+              )
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              Container(
+                child: Text('Singaraja', style: TextStyle(color: Colors.white, fontSize: 16.0),),
+                margin: EdgeInsets.only(left:53),
+                padding: EdgeInsets.all(5),
+                color: Colors.blue,
+              ),
+              Container(
+                child: Text('Sangket', style: TextStyle(color: Colors.white, fontSize: 16.0),),
+                margin: EdgeInsets.only(left:67),
+                padding: EdgeInsets.all(5),
+                color: Colors.green,
+              )
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              Container(
+                child: Icon(Icons.music_note, size: 60, color: Colors.orange,),
+                margin: EdgeInsets.only(top:15, left:50),
+                padding: EdgeInsets.only(left:10, right:10, top:5, bottom:5),
+                decoration: BoxDecoration(
+                  color: Colors.cyan[100],
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: Colors.purple,
+                    width: 2,
+                  )
+                ),
+              ),
+              Container(
+                child: Icon(Icons.weekend, size: 60,),
+                margin: EdgeInsets.only(top:15, left:55),
+                padding: EdgeInsets.only(left:10, right:10, top:5, bottom:5),
+                decoration: BoxDecoration(
+                  color: Colors.cyan[100],
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: Colors.purple,
+                    width: 2,
+                  )
+                ),
+              )
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              Container(
+                child: Text('All Genre', style: TextStyle(color: Colors.white, fontSize: 16.0),),
+                margin: EdgeInsets.only(left:55),
+                padding: EdgeInsets.all(5),
+                color: Colors.red,
+              ),
+              Container(
+                child: Text('Tidur', style: TextStyle(color: Colors.white, fontSize: 16.0),),
+                margin: EdgeInsets.only(left:77),
+                padding: EdgeInsets.all(5),
+                color: Colors.deepPurple,
+              )
+            ],
+          ),
+        ],  
+      ) 
+    );
+  }
+}
